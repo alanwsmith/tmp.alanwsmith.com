@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: #qqq;
+}
+*/ body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  color: hsla(32, 26%, 44%, 1);
+}
+
+h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid;
+}
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+  color: hsla(56, 38%, 51%, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+header {
+  padding-top: 18px;
+  padding-bottom: 4px;
+  width: 100%;
+  max-width: 98ch;
+  margin: 0 auto;
+  border-bottom: 1px solid #888;
+}
+main {
+  width: 100%;
+  max-width: 98ch;
+  margin: 0 auto;
+}
+footer {
+  width: 100%;
+  max-width: 98ch;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 12px;
+  font-size: 0.9rem;
+}
+p {
+  max-width: 68ch;
+}
+
+code {
+  border-radius: 22px;
+}
+
+input {
+  margin: 1px;
+}
+
+li {
+  margin-bottom: 17px;
+  max-width: 72ch;
+}
+
+ul {
+  padding-top: 20px;
+}
+
+pre {
+  font-size: 0.92rem;
+}
