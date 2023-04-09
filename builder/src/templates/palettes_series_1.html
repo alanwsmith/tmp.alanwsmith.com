@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Video Pixel Art Alfa</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      background-color: #14181b;
+      color: #e8e6e2;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    body {
+      line-height: 1.3;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    #root,
+    #__next {
+      isolation: isolate;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .palette_container {
+      max-width: 600px;
+      background-color: white;
+      padding: 80px;
+      margin-top: 40px;
+      margin-bottom: 70px;
+    }
+
+    .palette {
+      border: 3px solid black
+    }
+
+    .center {
+      display: grid;
+      place-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header></header>
+  <main class="center">
+    {% for path in paths %}<div class="palette_container"><img class="palette"
+        src="/palettes_series_1/images/{{path}}" /></div>
+    {% endfor %}
+  </main>
+  <footer></footer>
+</body>
+
+</html>
