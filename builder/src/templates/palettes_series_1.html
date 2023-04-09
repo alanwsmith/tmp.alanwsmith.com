@@ -3,12 +3,23 @@
 
 <head>
   <title>Video Pixel Art Alfa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+    rel="stylesheet">
   <style>
     html,
     body {
       height: 100%;
       background-color: #14181b;
       color: #e8e6e2;
+      font-size: 1.1rem;
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+    }
+
+    a {
+      color: #e8e6e2;
+      text-decoration: none;
     }
 
     *,
@@ -77,12 +88,26 @@
       display: grid;
       place-items: center;
     }
+
+    header {
+      padding-top: 20px;
+      padding-bottom: 28px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    p {
+      max-width: 400px;
+    }
   </style>
 </head>
 
 <body>
-  <header></header>
+  <header><a href="https://www.alanwsmith.com/">alanwsmith.com</a></header>
   <main class="center">
+    <p>I've become interested in the idea of generative art. This series represents my
+      first foray. </p>
+
     {% for path in paths %}<div class="palette_container"><img class="palette"
         src="/palettes_series_1/images/{{path}}" /></div>
     {% endfor %}
