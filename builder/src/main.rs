@@ -3,14 +3,14 @@ use minijinja::Environment;
 use std::fs;
 
 fn main() {
-    let output_path = "../site/palettes_series_1/index.html";
+    let output_path = "../site/palettes-series-1/index.html";
 
     let mut file_names: Vec<String> = vec![];
 
-    let video_pixel_art_alfa = fs::read_to_string("src/templates/palettes_series_1.html").unwrap();
+    let video_pixel_art_alfa = fs::read_to_string("src/templates/palettes-series-1.html").unwrap();
 
     let paths =
-        fs::read_dir("/Users/alan/workshop/tmp.alanwsmith.com/site/palettes_series_1/images")
+        fs::read_dir("/Users/alan/workshop/tmp.alanwsmith.com/site/palettes-series-1/images")
             .unwrap();
 
     for path in paths {
