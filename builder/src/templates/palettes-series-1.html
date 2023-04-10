@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Video Pixel Art Alfa</title>
+  <title>Palettes - Series 1 - alan w. smith</title>
+  <meta property="og:description"
+    content="A collection of randomly generated color pallets based of individual scan lines from random videos">
+  <meta property="og:title" content="Palettes - Series 1 - alan w. smith">
+  <meta property="og:image" content="https://tmp.alanwsmith.com/palettes-series-1/assets/og-image.png">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site:id" content="@TheIdOfAlan">
+  <meta name="twitter:creator" content="@TheIdOfAlan">
+  <link rel="icon" type="image/png" sizes="228x228" href="/favicons/228x228.png">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/favicons/180x180.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;display=swap"
     rel="stylesheet">
   <style>
     html,
@@ -72,19 +86,6 @@
       cursor: pointer;
     }
 
-    .palette_container {
-      background-color: white;
-      padding: 12vh;
-      margin-top: 10vh;
-      margin-bottom: 10vh;
-      max-height: 87vh;
-      max-width: 87vh;
-    }
-
-    .palette {
-      border: 3px solid black;
-    }
-
     .center {
       display: grid;
       place-items: center;
@@ -106,9 +107,26 @@
     }
 
     .separater {
-      font-size: 1.5rem;
+      font-size: 1rem;
       color: #333;
       margin: 11vh 0;
+    }
+
+    .palette_container {
+      display: grid;
+      place-items: center;
+    }
+
+    .palette_wrapper {
+      background-color: #ddd;
+      display: grid;
+      place-items: center;
+      width: min(91vh, 100vw);
+      height: min(91vh, 100vw);
+    }
+
+    .palette_image {
+      border: 3px solid black;
     }
   </style>
 </head>
@@ -123,10 +141,26 @@
         pixels from video and extending it vertically to match the width of the source.</p>
     </div>
 
-    {% for path in paths %}
-    <div class="palette_container"><img class="palette" src="./images/{{path}}" /></div>
-    <div class="separater">§</div>
-    {% endfor %}
+    <div class="palette_container">
+      {% for image in payload.images %}
+      <div class="palette_wrapper">
+        <img class="palette_image" src="./images/{{image.path}}" style="
+      --widthRaw: {{ image.width }};
+        --heightRaw: {{ image.height }};
+      --widthPixels:  calc(var(--widthRaw)  * 1px);
+      --heightPixels: calc(var(--heightRaw) * 1px);
+      --widthBaseMin:  min(74vw, var(--widthPixels));
+      --heightBaseMin: min(74vh, var(--heightPixels));
+      --widthCheck: calc(var(--widthRaw) / var(--heightRaw) * var(--heightBaseMin));
+      --heightCheck: calc(var(--heightRaw) / var(--widthRaw) * var(--widthBaseMin));
+      width: min(var(--widthPixels), var(--widthBaseMin), var(--widthCheck));
+      height: min(var(--heightPixels), var(--heightBaseMin), var(--heightCheck));
+      " />
+      </div>
+
+      <div class="separater">§</div>
+      {% endfor %}
+    </div>
   </main>
   <footer></footer>
 </body>
