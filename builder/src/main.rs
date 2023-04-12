@@ -1,4 +1,3 @@
-#![allow(warnings)]
 use imagesize::size;
 use minijinja::context;
 use minijinja::Environment;
@@ -26,19 +25,20 @@ struct Image {
 }
 
 fn main() {
+    // let mut env = Environment::new();
+    // env.add_template("palettes", template.as_str()).unwrap();
+
+    //
     let mut payload = Payload::new();
-
-    let output_path = "../site/palettes-series-1/index.html";
-
-    let mut images: Vec<Image> = vec![];
+    let output_path = "../site/palettes-series-2/index.html";
 
     let mut file_names: Vec<String> = vec![];
 
-    let video_pixel_art_alfa = fs::read_to_string("src/templates/palettes-series-1.html").unwrap();
+    let video_pixel_art_alfa = fs::read_to_string("src/templates/palettes-series-2.html").unwrap();
     // let video_pixel_art_alfa = fs::read_to_string("src/templates/test.html").unwrap();
 
     let paths =
-        fs::read_dir("/Users/alan/workshop/tmp.alanwsmith.com/site/palettes-series-1/images")
+        fs::read_dir("/Users/alan/workshop/tmp.alanwsmith.com/site/palettes-series-2/images")
             .unwrap();
 
     for path in paths {
@@ -64,7 +64,6 @@ fn main() {
             None => (),
         }
     }
-    // let output = render_template(video_pixel_art_alfa, file_names);
     let output = render_template(video_pixel_art_alfa, payload);
     dbg!(&output);
     fs::write(output_path, output).unwrap();
@@ -74,7 +73,6 @@ fn render_template(template: String, payload: Payload) -> String {
     let mut env = Environment::new();
     env.add_template("template", template.as_str()).unwrap();
     let tmpl = env.get_template("template").unwrap();
-    // tmpl.render(context!(paths => paths)).unwrap().to_string()
     tmpl.render(context!(payload => &payload))
         .unwrap()
         .to_string()
