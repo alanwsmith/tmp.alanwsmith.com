@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Bluesky Communities" />
+  <meta property="og:description" content="Considering if it's possible to setup safer communities inside Bluesky" />
+  <meta property="og:image" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site:id" content="@TheIdOfAlan" />
+  <meta name="twitter:creator" content="@TheIdOfAlan" />
+  <link rel="icon" type="image/png" sizes="228x228" href="/favicons/228x228.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/favicons/180x180.png" />
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+
+
+<body>
+  <header>
+    <a href="/">Home</a> ~
+    <a href="https://www.alanwsmith.com/">alanwsmith.com</a> ~
+    <a href="https://links.alanwsmith.com">links</a> ~
+    <a href="https://podcast.alanwsmith.com/">podcast</a> ~
+    <a href="https://bsky.app/profile/alanwsmith.com">bluesky</a>
+  </header>
+  <main>
+    <h1>Considering Custom Communities Inside Bluesky</h1>
+
+    <p>I've meet a bunch of cool folks on Bluesky. That doesn't happen much in other places. I don't want to see it
+      go away. So, I've been thinking
+      about ways to salvage the service before everyone moves on for their own safety</p>
+
+    <p>The idea I keep coming back
+      to is custom communities. Ones that would let individual communities take control of their own Trust and Safety
+      and
+      moderation practices. A setup where they could, for example, ban people who make death threats</p>
+
+    <p>Here's where my head's at:</p>
+
+    <h2>Bluesky</h2>
+    <ul>
+      <li>Like other social networks, the core of Bluesky is made of posts that get turned into feeds. The default feeds
+        being
+        &quot;Following&quot;, &quot;What's Hot&quot;, etc... </li>
+      <li>The service is designed to be open-source and federated which means it is/will-be possible to setup and run
+        your own server with your own community. Racists have suggested that if folks don't like what's happening on
+        Bluesky folks should do just that. This post is about an alternative
+      </li>
+      <li>A key aspect of federated servers is that banning someone on one server doesn't ban them from the entire
+        network. They can jump to another server. (This is like Discord where you can kick folks from your server but
+        not from other servers or the entire Discord network)
+      </li>
+
+    </ul>
+
+
+    <h2>Custom Feeds</h2>
+    <ul>
+      <li>Bluesky now has the capability of making/using custom feeds</li>
+      <li>The feeds are separate from the app. Or, more to the point, you can use different apps to access the feeds
+        which lets you control what you see
+      </li>
+      <li>Combined, that provides the opportunity to setup customized feeds and apps where community moderation is
+        controlled by community members instead of Bluesky
+      </li>
+      <li>For example, you could create a community with a blocklist of banned users. Those banned users would still be
+        on the Bluesky network, but they wouldn't show up inside community members' feeds</li>
+      <li>This would be like shared block lists but individual community members wouldn't have to do anything. The
+        block/ban would happen at the community/feed level</li>
+      <li>You could go the other way and use a clearlist to make an invite only community</li>
+      <li>It doesn't have to be explicit invites either. For example, you could setup so that anyone in the larger
+        Bluesky
+        network could join your community by making a post with a specific hashtag. That could add them automatically
+        while letting mods know someone new has come in. Similar to having a public link to a Discord server
+      </li>
+      <li>(Note: my understanding is that everything is public as this point. If that's accurate it means you wouldn't
+        see blocked users but they could still see your posts. But, if everything really is public, that would be the
+        case regardless. I need to look into that more)</li>
+
+    </ul>
+
+    <h2>Finishing Up</h2>
+
+    <ul>
+
+      <li>All this stuff is just implementation details that provide the ability to enforce a policy. It doesn't matter
+        at all without a solid policy in place
+      </li>
+
+
+      <li>This is like the federated model but instead of expanding out and having to set up full servers, you filter
+        things inward and ride on top of the existing Bluesky infrastructure and servers to get the community and
+        moderation control through the use of the custom feeds</li>
+
+      <li>It would take some work to get this all going. It's not awful, but it would take time and energy. There would
+        also be cost for upkeep to maintain the feeds. It likely wouldn't be overwhelming, but it's worth pointing out
+      </li>
+
+      <li>This does not address bluesky moderation itself. It won't change their practices. It merely offers an
+        opportunity to create a subset of the network with additional moderation controls in the hands of the community
+      </li>
+
+      <li>I'm wary that this ends up being an attempt to use technology to solve community problems. I hope it's not
+        that. I
+        hope this is more using existing technology to empower people to make and have oversight over their own
+        communities but I fully acknowledge I could be way off base
+      </li>
+    </ul>
+
+
+    <h2>Other Thoughts</h2>
+    <ul>
+      <li>I learned about the idea of Non-Ideal Solutions from <a
+          href="https://bsky.app/profile/shengokai.bsky.social">Dr. Johnathan Flowers</a> in
+        <a href="https://bsky.app/profile/shengokai.bsky.social/post/3jwrgzbq6gk22">these posts</a>. I'm not sure if
+        this qualifies, but it might. Specifically, the Ideal Solution would be for Bluesky (or some other service) to
+        be
+        a place where folks felt safe. But, if that Ideal Solution isn't achievable, can we setup a Non-Ideal Solution
+        with spaces
+        designed for safety that exist inside the spaces that aren't?
+      </li>
+
+      <li><a href="https://bsky.app/profile/rudyfraser.com">Rudy Fraser</a> is way ahead of me and has already done an
+        initial version of this type of thing with <a href="https://github.com/rudyfraser/blacksky">#blacksky</a>. </li>
+
+      <li>I mentioned Discord a few times. This would be like that.
+
+        For example, I can join multiple Discord servers/communities.
+        Each one will have their on moderation practices that I could be banned from violating. But,
+        being banned from one doesn't ban me from the entire network or from the other servers I'm on.
+        Discord could ban me
+        at the network level in the same way Bluesky can. But, with Discord, the brunt of moderation falls on the
+        communities themselves. The same would apply with custom communities on Bluesky
+      </li>
+
+      <li>There's a slew of app interaction/user experience things that would crop up. For example, if you where in five
+        communities with someone else you'd see each one of there posts in all five feeds. That's not something that
+        would just happen with custom communities, it's what happens with all the custom feeds. (That stuff doesn't
+        matter in
+        context of the larger question of if this is an idea worth pursuing, but it's the kind of thing some folks bring
+        up which creates noise. So, yes, there's a bunch of stuff like that which would need to be addressed)
+      </li>
+
+      <li>Custom apps wouldn't be required. You could still use the base app to just view your feeds that way. The
+        custom apps just offer the ability to make that nicer and completely do away with the default feeds (e.g. you
+        wouldn't have to see the default &quot;What's Hot&quot; you could switch to a custom &quot;What's Hot&quot; for
+        just your community)</li>
+
+      <li>The Bluesky moderation practices would still be in place. The communities would layer their own moderation on
+        top. So, a community could ban people from their space but they would remain on the Bluesky network unless
+        Bluesky decided to ban them as well (which hopefully they'll get better about). However, if Bluesky bans someone
+        the
+        community wouldn't be able to override that to let them back in
+      </li>
+      <li>This is not a perfect solution, but it's the best I can come up with given the primary goal of
+        serving people in as safe a way as I know how</li>
+    </ul>
+  </main>
+  <footer>
+    from alan w. smith
+    <br />
+    <a href="https://www.alanwsmith.com">website</a> ~
+    <a href="https://links.alanwsmith.com">links</a> ~
+    <a href="https://podcast.alanwsmith.com/">podcast</a><br />
+    <a href="https://bsky.app/profile/alanwsmith.com">bluesky</a>
+  </footer>
+</body>
+
+</html>
